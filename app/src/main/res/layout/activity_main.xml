@@ -10,15 +10,37 @@
     android:orientation="vertical"
     tools:context="com.github.florent37.fiftyshadesof.MainActivity">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@color/colorPrimary"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="15dp"
+            android:src="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:text="The title" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:text="The subtitle" />
+
+    </RelativeLayout>
+
+
 </LinearLayout>
