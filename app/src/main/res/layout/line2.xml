@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/image3"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_toRightOf="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#3A3A3A"
+        android:text="Vegas at night" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:text="The bright lights of the Vegas Strip are most dazzling at night, creating a vibrancy that extends from the streets to the bars, clubs and theaters" />
+
+</RelativeLayout>

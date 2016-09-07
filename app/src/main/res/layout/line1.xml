@@ -11,7 +11,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginRight="15dp"
-        android:src="@color/colorPrimary"/>
+        android:src="@drawable/image2"/>
 
     <TextView
         android:id="@+id/title"
@@ -22,7 +22,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="#3A3A3A"
-        android:text="The title" />
+        android:text="The city of NY" />
 
     <TextView
         android:id="@+id/subTitle"
@@ -33,6 +33,6 @@
         android:layout_marginRight="100dp"
         android:textSize="18sp"
         android:textColor="#999999"
-        android:text="The subtitle" />
+        android:text="Don\'t forget to book your travel now !" />
 
 </RelativeLayout>

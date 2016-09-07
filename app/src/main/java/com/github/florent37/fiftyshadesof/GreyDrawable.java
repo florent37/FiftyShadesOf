@@ -20,11 +20,11 @@ import java.lang.ref.WeakReference;
  * Created by f.champigny on 30/08/16.
  */
 public class GreyDrawable extends Drawable {
-    public final static int DEFAULT_GREY = Color.argb(100, 215, 215, 215);
-    public final static int DARKER_GREY = Color.argb(200, 180, 180, 180);
+    public final static int DEFAULT_GREY = Color.argb(50, 200, 200, 200);
+    public final static int DARKER_GREY = Color.argb(160, 180, 180, 180);
 
-    public final static int DEFAULT_GREY_BOLD = Color.argb(100, 180, 180, 180);
-    public final static int DARKER_GREY_BOLD = Color.argb(200, 150, 150, 150);
+    public final static int DEFAULT_GREY_BOLD = Color.argb(50, 180, 180, 180);
+    public final static int DARKER_GREY_BOLD = Color.argb(180, 150, 150, 150);
 
     public final static int DURATION = 750;
     public final static int STOP_DURATION = 200;
@@ -113,6 +113,14 @@ public class GreyDrawable extends Drawable {
         valueAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
+                if (callback != null) {
+                    callback.onFadeOutFinished();
+                }
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                super.onAnimationCancel(animation);
                 if (callback != null) {
                     callback.onFadeOutFinished();
                 }

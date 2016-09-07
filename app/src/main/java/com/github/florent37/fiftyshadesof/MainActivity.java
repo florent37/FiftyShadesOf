@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.load).setOnClickListener(new View.OnClickListener() {
+        findViewById(android.R.id.content).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 load();
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     void load(){
         final FiftyShadesOf fiftyShadesOf = FiftyShadesOf.with(this)
-            .on(R.id.layout, R.id.layout1, R.id.layout2, R.id.layout3)
+            .on(R.id.layout, R.id.layout1, R.id.layout2)
             .start();
 
         new Handler().postDelayed(new Runnable() {

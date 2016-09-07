@@ -10,14 +10,6 @@
     android:orientation="vertical"
     tools:context="com.github.florent37.fiftyshadesof.MainActivity">
 
-    <Button
-        android:id="@+id/load"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="load"
-        android:layout_marginBottom="20dp"
-        />
-
     <FrameLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
@@ -25,7 +17,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line"/>
+        <include layout="@layout/line0"/>
 
     </FrameLayout>
 
@@ -36,7 +28,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line"/>
+        <include layout="@layout/line1"/>
 
     </RelativeLayout>
 
@@ -47,17 +39,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        >
-        <include layout="@layout/line"/>
+        <include layout="@layout/line2"/>
 
     </RelativeLayout>
 
