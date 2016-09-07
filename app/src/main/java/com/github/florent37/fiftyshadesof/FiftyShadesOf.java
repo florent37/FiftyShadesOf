@@ -19,6 +19,8 @@ public class FiftyShadesOf {
 
     private HashMap<View, ViewState> viewsState;
 
+    boolean fadein = true;
+
     public FiftyShadesOf(Context context) {
         this.context = context;
         this.viewsState = new HashMap<>();
@@ -38,7 +40,12 @@ public class FiftyShadesOf {
         return this;
     }
 
-    public void add(View view) {
+    public FiftyShadesOf fadein(boolean fadein) {
+        this.fadein = fadein;
+        return this;
+    }
+
+    private void add(View view) {
         if (view instanceof TextView) {
             TextView textView = (TextView) view;
             viewsState.put(view, new TextViewState(textView));
@@ -70,7 +77,7 @@ public class FiftyShadesOf {
 
     public FiftyShadesOf start() {
         for (ViewState viewState : viewsState.values()) {
-            viewState.start();
+            viewState.start(fadein);
         }
         return this;
     }

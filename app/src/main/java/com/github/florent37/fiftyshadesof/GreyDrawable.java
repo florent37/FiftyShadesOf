@@ -29,6 +29,8 @@ public class GreyDrawable extends Drawable {
     public final static int DURATION = 750;
     public final static int STOP_DURATION = 200;
 
+    boolean fadein = false;
+
     int grayColor = DEFAULT_GREY;
     ValueAnimator valueAnimator;
     Paint paint;
@@ -48,6 +50,14 @@ public class GreyDrawable extends Drawable {
     @Override
     public void setAlpha(int i) {
 
+    }
+
+    public boolean isFadein() {
+        return fadein;
+    }
+
+    public void setFadein(boolean fadein) {
+        this.fadein = fadein;
     }
 
     @Override
@@ -93,8 +103,43 @@ public class GreyDrawable extends Drawable {
     public void stop(@Nullable final Callback callback) {
         valueAnimator.cancel();
 
-        final int emptyColor = Color.argb(0, Color.red(grayColor), Color.green(grayColor), Color.blue(grayColor));
+        if (fadein) {
+            stopFadeIn(callback);
+        } else {
+            stopGray(callback);
+        }
+    }
 
+    public void stopFadeIn(@Nullable final Callback callback) {
+        if (callback != null) {
+            View v = viewWeakReference.get();
+            if (v != null) {
+                ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(v, View.ALPHA, 0f).setDuration(400);
+                alphaAnimator.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        callback.onFadeOutStarted();
+
+                        callback.onFadeOutFinished();
+                        View v = viewWeakReference.get();
+                        if (v != null) {
+                            ObjectAnimator.ofFloat(v, View.ALPHA, 1f).start();
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        onAnimationEnd(animation);
+                    }
+                });
+                alphaAnimator.start();
+            }
+        }
+    }
+
+    public void stopGray(@Nullable final Callback callback) {
+
+        final int emptyColor = Color.argb(0, Color.red(grayColor), Color.green(grayColor), Color.blue(grayColor));
         valueAnimator = ValueAnimator.ofInt(grayColor, emptyColor);
         valueAnimator.setDuration(STOP_DURATION);
         valueAnimator.setEvaluator(new ArgbEvaluator());
@@ -110,11 +155,16 @@ public class GreyDrawable extends Drawable {
                 }
             }
         });
+
         valueAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 if (callback != null) {
                     callback.onFadeOutFinished();
+                    View v = viewWeakReference.get();
+                    if (v != null) {
+                        ObjectAnimator.ofFloat(v, View.ALPHA, 1f).start();
+                    }
                 }
             }
 

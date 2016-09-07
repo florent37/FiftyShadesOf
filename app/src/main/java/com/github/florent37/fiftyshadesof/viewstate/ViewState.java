@@ -28,9 +28,10 @@ public abstract class ViewState<V extends View> {
         this.view.setBackgroundDrawable(background);
     }
 
-    public void start() {
+    public void start(boolean fadein) {
         GreyDrawable greyDrawable = new GreyDrawable();
         this.view.setBackgroundDrawable(greyDrawable);
+        greyDrawable.setFadein(fadein);
         greyDrawable.start(view, darker);
     }
 

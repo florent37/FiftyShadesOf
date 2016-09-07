@@ -27,8 +27,8 @@ public class TextViewState extends ViewState<TextView> {
     }
 
     @Override
-    public void start() {
-        super.start();
+    public void start(boolean fadein) {
+        super.start(fadein);
         view.setTextColor(Color.TRANSPARENT);
     }
 }
