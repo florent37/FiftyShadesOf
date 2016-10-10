@@ -1,9 +1,10 @@
-package com.github.florent37.fiftyshadesof;
+package com.github.florent37.sample.fiftyshadesof;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
+import com.github.florent37.fiftyshadesof.FiftyShadesOf;
 
 public class MainActivity extends AppCompatActivity {
 

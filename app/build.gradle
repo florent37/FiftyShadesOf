@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
+version = project.libraryVersion
+
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion project.sdk
+    buildToolsVersion project.buildTools
 
     defaultConfig {
+        minSdkVersion project.minSdk
+        targetSdkVersion project.sdk
         applicationId "com.github.florent37.fiftyshadesof"
-        minSdkVersion 15
-        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +22,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0-beta1'
+    compile project(':fiftyshadesof')
+    compile 'com.android.support:appcompat-v7:'+project.supportVersion
 }
