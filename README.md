@@ -10,7 +10,7 @@ FiftyShadesOf.with(context)
              .start();
 ```
 
-[![screen](https://raw.githubusercontent.com/florent37/FiftyShadedOf/master/media/fadein.gif)](https://www.github.com/florent37/fiftyshadedof)
+[![screen](https://raw.githubusercontent.com/florent37/FiftyShadesOf/master/media/fadein.gif)](https://www.github.com/florent37/fiftyshadedof)
 
 #Available attributes
 
@@ -40,7 +40,7 @@ FiftyShadesOf.with(context)
              .start();
 ```
 
-[![screen](https://raw.githubusercontent.com/florent37/FiftyShadedOf/master/media/cross.gif)](https://www.github.com/florent37/fiftyshadedof)
+[![screen](https://raw.githubusercontent.com/florent37/FiftyShadesOf/master/media/cross.gif)](https://www.github.com/florent37/fiftyshadedof)
 
 ## Fade
 
@@ -51,7 +51,7 @@ FiftyShadesOf.with(context)
              .start();
 ```
 
-[![screen](https://raw.githubusercontent.com/florent37/FiftyShadedOf/master/media/fadein.gif)](https://www.github.com/florent37/fiftyshadedof)
+[![screen](https://raw.githubusercontent.com/florent37/FiftyShadesOf/master/media/fadein.gif)](https://www.github.com/florent37/fiftyshadedof)
 
 #Download
 
