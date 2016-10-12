@@ -1,5 +1,7 @@
 # FiftyShadesOf
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FiftyShadesOf-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4505)
+
 An elegant context-care loading placeholder for Android
 
 #Usage
