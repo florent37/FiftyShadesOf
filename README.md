@@ -6,7 +6,7 @@ An elegant context-care loading placeholder for Android
 
 #Usage
 
-```xml
+```java
 FiftyShadesOf.with(context)
              .on(view1, view2, view3)
              .start();
@@ -18,7 +18,7 @@ FiftyShadesOf.with(context)
 
 ## View Selector
 
-```xml
+```java
 FiftyShadesOf.with(context)
 
              .on(R.id.view1, R.id.view2, R.id.view3) //views id
@@ -27,7 +27,7 @@ FiftyShadesOf.with(context)
              
              .on(viewGroup) //group of views
              
-             .exept(view1, view2) //skip a view
+             .except(view1, view2) //skip a view
 
              .start();
 ```
@@ -36,7 +36,7 @@ FiftyShadesOf.with(context)
 
 (By Default)
 
-```xml
+```java
 FiftyShadesOf.with(context)
              .on(R.id.view)
              .start();
@@ -46,7 +46,7 @@ FiftyShadesOf.with(context)
 
 ## Fade
 
-```xml
+```java
 FiftyShadesOf.with(context)
              .on(R.id.view)
              .fadeIn(true)
@@ -58,7 +58,7 @@ FiftyShadesOf.with(context)
 #Download
 
 In your module [![Download](https://api.bintray.com/packages/florent37/maven/FiftyShadesOf/images/download.svg)](https://bintray.com/florent37/maven/FiftyShadesOf/_latestVersion)
-```groovy
+```gradle
 compile 'com.github.florent37:fiftyshadesof:1.0.0'
 ```
 
