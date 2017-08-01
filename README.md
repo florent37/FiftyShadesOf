@@ -4,7 +4,7 @@
 
 An elegant context-care loading placeholder for Android
 
-#Usage
+# Usage
 
 ```java
 FiftyShadesOf.with(context)
@@ -55,14 +55,14 @@ FiftyShadesOf.with(context)
 
 [![screen](https://raw.githubusercontent.com/florent37/FiftyShadesOf/master/media/fadein.gif)](https://www.github.com/florent37/fiftyshadedof)
 
-#Download
+# Download
 
 In your module [![Download](https://api.bintray.com/packages/florent37/maven/FiftyShadesOf/images/download.svg)](https://bintray.com/florent37/maven/FiftyShadesOf/_latestVersion)
 ```gradle
 compile 'com.github.florent37:fiftyshadesof:1.0.0'
 ```
 
-#Credits
+# Credits
 
 Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
 
