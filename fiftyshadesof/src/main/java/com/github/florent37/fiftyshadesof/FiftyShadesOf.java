@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.github.florent37.fiftyshadesof.viewstate.ImageViewState;
 import com.github.florent37.fiftyshadesof.viewstate.TextViewState;
 import com.github.florent37.fiftyshadesof.viewstate.ViewState;
+
 import java.util.HashMap;
 
 /**
@@ -20,6 +22,8 @@ public class FiftyShadesOf {
     private HashMap<View, ViewState> viewsState;
 
     boolean fadein = true;
+
+    private boolean started;
 
     public FiftyShadesOf(Context context) {
         this.context = context;
@@ -76,15 +80,26 @@ public class FiftyShadesOf {
     }
 
     public FiftyShadesOf start() {
-        for (ViewState viewState : viewsState.values()) {
-            viewState.start(fadein);
+        if (!started) {
+            //prepare for starting
+            for (ViewState viewState : viewsState.values()) {
+                viewState.beforeStart();
+            }
+            started = true;
+            //start
+            for (ViewState viewState : viewsState.values()) {
+                viewState.start(fadein);
+            }
         }
         return this;
     }
 
     public FiftyShadesOf stop() {
-        for (ViewState viewState : viewsState.values()) {
-            viewState.stop();
+        if (started) {
+            for (ViewState viewState : viewsState.values()) {
+                viewState.stop();
+            }
+            started = false;
         }
         return this;
     }

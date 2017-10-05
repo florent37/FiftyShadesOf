@@ -15,8 +15,8 @@ public class TextViewState extends ViewState<TextView> {
     }
 
     @Override
-    protected void init() {
-        super.init();
+    public void beforeStart() {
+        super.beforeStart();
         this.textColor = view.getTextColors();
         this.darker = view.getTypeface() != null && view.getTypeface().isBold();
     }

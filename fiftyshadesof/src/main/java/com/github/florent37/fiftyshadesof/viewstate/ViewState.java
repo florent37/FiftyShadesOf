@@ -14,11 +14,6 @@ public abstract class ViewState<V extends View> {
 
     public ViewState(V view) {
         this.view = view;
-        init();
-    }
-
-    protected void init() {
-        this.background = view.getBackground();
     }
 
     protected void restore() {
@@ -26,6 +21,10 @@ public abstract class ViewState<V extends View> {
 
     protected void restoreBackground() {
         this.view.setBackgroundDrawable(background);
+    }
+
+    public void beforeStart(){
+        this.background = view.getBackground();
     }
 
     public void start(boolean fadein) {
