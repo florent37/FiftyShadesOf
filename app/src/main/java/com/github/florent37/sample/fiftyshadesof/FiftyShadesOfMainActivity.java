@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.github.florent37.fiftyshadesof.FiftyShadesOf;
 
-public class MainActivity extends AppCompatActivity {
+public class FiftyShadesOfMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fiftyshadesof_activity_main);
         findViewById(android.R.id.content).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

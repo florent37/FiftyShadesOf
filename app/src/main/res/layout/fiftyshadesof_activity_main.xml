@@ -17,7 +17,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line0"/>
+        <include layout="@layout/fiftyshadesof_line0"/>
 
     </FrameLayout>
 
@@ -28,7 +28,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line1"/>
+        <include layout="@layout/fiftyshadesof_line1"/>
 
     </RelativeLayout>
 
@@ -39,7 +39,7 @@
         android:layout_marginBottom="10dp"
         >
 
-        <include layout="@layout/line2"/>
+        <include layout="@layout/fiftyshadesof_line2"/>
 
     </RelativeLayout>
 
