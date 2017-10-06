@@ -16,8 +16,8 @@ public class ImageViewState extends ViewState<ImageView> {
     }
 
     @Override
-    protected void init() {
-        super.init();
+    public void beforeStart() {
+        super.beforeStart();
         this.source = view.getDrawable();
         view.setImageDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
